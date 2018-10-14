@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>RoadMap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:900" rel="stylesheet">
+
+  <!--Bootstrap declarations-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color:cornflowerblue">
+  <!--Navigation Bar-->
+  <nav class="navbar navbar-inverse" style="background-color:black;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="main.html" style="color:white;">RoadMap</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="main.html">Home</a></li>
+          <li><a href="#">What we do</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container-fluid" style="margin-top:-20px;">
+    <div class="row">
+      <div class="col-sm-3 col-md-6 col-lg-4" style="background-color:lavender; text-align:center;">
+        <h1>International Institute of St. Louis Contacts</h1>
+        <h3><em>First-Step Contact Information</em></h3>
+        <b>Anita Baker</b>
+        <a href="mailto:barkera@iistl.org">barkera@iistl.org</a>
+        <i>314-773-9090, ext. 107</i>
+        <h3><em>Job Placement</em></h3>
+        <b>Emma Richardson</b>
+        <a href="mailto:richardsone@iistl.org ">richardsone@iistl.org</a>
+        <i>314-773-9090, ext. 164</i>
+        <br>
+        <b>Jean De Dieu Sebunyenzi</b>
+        <a href="mailto:sebunyenzij@iistl.org">sebunyenzij@iistl.org"</a>
+        <i>314-773-9090, ext. 166</i>
+        
+        <h3><em>C.A.I.P. Contact Information</em></h3>
+        <b>Charmaine Burrus</b>
+        <a href="mailto:urrusc@iistl.org">urrusc@iistl.org</a>
+        <i>314-773-9090, ext. 108</i>
+        
+        <h3><em>Career Pathways Contact Information</em></h3>
+        <b>Sarah Masoud</b>
+        <a href="mailto:masouds@iistl.org">masouds@iistl.org</a>
+        <i>314-773-9090, ext. 116</i>
+        
+      </div>
+      <div class="col-sm-9 col-md-6 col-lg-8">
+        <p>The <i>International Institute of St. Louis</i> is a dedicated and reputable organization that has helped
+          many generations of new Americans in St. Louis for generations.</i></p>
+        <p>isum ilar odbau oiahdfoib foaibd aoib foi abdoia baoidbfiaob aoidbfaob adoba</p>
+        <p>Below, we will provide a map with various locations to help you in your job search</p>
+
+        <h3 style="color:white">Employment Firms</h3>
+        <!--The div element for the map -->
+        <div id="map"></div>
+
+
+
+        <script>
+          // Initialize and add the map
+          function initMap() {
+            var locations = [
+              ['Robert Half', 38.6495, -90.4634, 5],
+              ['Staffing Solutions, Inc.', 38.6474, -90.3408, 4],
+              ['PrideStaff', 38.6421, -90.3651, 3],
+              ['Aerotek', 38.6495, -90.47036, 2],
+              ['Beacon Hill Staffing', 38.6288, -90.3468, 1]
+            ];
+            // The location of St. Louis
+            var BJC1 = { lat: 38.6337, lng: -90.2543 };
+            // The map, centered at St. Louis
+            var map = new google.maps.Map(
+              document.getElementById('map'), { zoom: 11, center: BJC1 });
+            // The marker, positioned at St. Louis
+            var marker = new google.maps.Marker({ position: BJC1, map: map });
+
+            var marker;
+
+            for (var i = 0; i < locations.length; i++) {
+              marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+              });
+            }
+          }
+
+        </script>
+        <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxSN1lD43oo0j_T1Dx7pdZRA_QQl3ave4&callback=initMap">
+        </script>
+      </div>
+
+    </div>
+    <div class="row">
+                <img class="center-block" src="SitePics/icon_web-512.png" id="header">
+                <div class="caption text-center"></div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

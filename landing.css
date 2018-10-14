@@ -1,0 +1,33 @@
+.dropdown {
+    margin: auto;
+    text-align: center;
+
+}
+ul.dropdown-menu {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    right: auto;
+    text-align: center;
+    transform: translate(-50%, 0);
+}
+
+.btn-primary {
+    background-color: white;
+}
+h1,h2 {
+    font-family: 'Merriweather',serif;
+    text-align: center;
+}
+
+#header {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+       height: auto;
+       padding:5px;
+       opacity: 0.5;
+}
+
